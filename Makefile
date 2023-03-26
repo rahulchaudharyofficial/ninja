@@ -25,8 +25,8 @@ SOURCE=$(wildcard $(SRCDIR)/*.c)
 OBJECT=$(patsubst $(SRCDIR)/%.c,$(OBJDIR)/%.o, $(SOURCE))
 
 
-
-all: $(LIB) $(BIN)
+# all: $(LIB) $(BIN)
+all: $(LIB)
 
 $(INIT):
 	@mkdir -p -v obj
@@ -35,11 +35,12 @@ $(INIT):
 	@mkdir -p -v $(TEST)/bin
 
 $(BIN): $(OBJECT)
-	$(CC) $(CFLAG) $(OBJECT) -o $@ -lm
+#	$(CC) $(CFLAG) $(OBJECT) -o $@ -lm
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
 	$(CC) $(CFLAG) -c $< -o $@
 
+# $(LIB): $(INIT) $(BIN)
 $(LIB): $(INIT) $(BIN)
 	$(LIB_COMMAND) $(LIB) $(OBJECT)
 
@@ -47,7 +48,7 @@ $(LIB): $(INIT) $(BIN)
 .PHONY: clean
 
 run: $(BIN)
-	./$(BIN)
+#   ./$(BIN)
 
 
 clean:

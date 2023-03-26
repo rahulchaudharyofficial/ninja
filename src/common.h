@@ -8,4 +8,5 @@
     int* create_array(const unsigned int size);
     void fill_array_with_random_data(int* arr, const int size);
     void print_array(int*, const int);
+    bool compare_int_array(int *arr1, int *arr2, int arrSize);
 #endif
