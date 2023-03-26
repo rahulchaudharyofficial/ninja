@@ -53,27 +53,23 @@ run: $(BIN)
 clean:
 	if [ -d "$(OBJDIR)" ]; then \
 		rm -rfv $(OBJDIR); \
-	fi \
+	fi
 
 	if [ -d "$(LIBDIR)" ]; then \
 		rm -rfv $(LIBDIR); \
-	fi \
-<<<<<<< HEAD
+	fi
 
 	if [ -d "$(TESTBIN)" ]; then \
 		rm -rfv $(TESTBIN); \
-	fi \
-
-=======
+	fi
 	
 	if [ -d "$(TESTBIN)" ]; then \
 		rm -rfv $(TESTBIN); \
-	fi \
+	fi
 	
->>>>>>> 3c20bd05421635ea547c5e38dd32d0ca96f7f26d
 	if [ -d "$(BINDIR)" ]; then \
 		rm -rfv $(BINDIR); \
-	fi \
+	fi
 
 $(TESTBIN)/%: $(TEST)/%.c
 	$(CC) $(CFLAG) $< $(LIB) -o $@ -lcriterion -lm
@@ -82,8 +78,4 @@ test: $(LIB) $(TESTBIN) $(TESTBINS)
 	for t in $(TESTBINS) ; do ./$$t --verbose ; done
 
 $(TESTBIN):
-<<<<<<< HEAD
 	mkdir $@
-=======
-	mkdir $@
->>>>>>> 3c20bd05421635ea547c5e38dd32d0ca96f7f26d
