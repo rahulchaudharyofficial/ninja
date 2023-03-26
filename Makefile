@@ -58,11 +58,19 @@ clean:
 	if [ -d "$(LIBDIR)" ]; then \
 		rm -rfv $(LIBDIR); \
 	fi \
+<<<<<<< HEAD
 
 	if [ -d "$(TESTBIN)" ]; then \
 		rm -rfv $(TESTBIN); \
 	fi \
 
+=======
+	
+	if [ -d "$(TESTBIN)" ]; then \
+		rm -rfv $(TESTBIN); \
+	fi \
+	
+>>>>>>> 3c20bd05421635ea547c5e38dd32d0ca96f7f26d
 	if [ -d "$(BINDIR)" ]; then \
 		rm -rfv $(BINDIR); \
 	fi \
@@ -74,4 +82,8 @@ test: $(LIB) $(TESTBIN) $(TESTBINS)
 	for t in $(TESTBINS) ; do ./$$t --verbose ; done
 
 $(TESTBIN):
+<<<<<<< HEAD
 	mkdir $@
+=======
+	mkdir $@
+>>>>>>> 3c20bd05421635ea547c5e38dd32d0ca96f7f26d

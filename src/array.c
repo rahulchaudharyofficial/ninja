@@ -1,4 +1,8 @@
 #include "array.h"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3c20bd05421635ea547c5e38dd32d0ca96f7f26d
 
 bool isValid(int* arr, int arrSize)
 {
@@ -30,4 +34,8 @@ void duplicateZeros(int* arr, int arrSize) {
             }
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 3c20bd05421635ea547c5e38dd32d0ca96f7f26d
